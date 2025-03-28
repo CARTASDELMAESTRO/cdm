@@ -8,39 +8,54 @@
         body { font-family: Arial, sans-serif; text-align: center; }
         img { max-width: 100%; height: auto; }
         button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .cartas-mostradas img { max-width: 200px; margin: 10px; }
     </style>
 </head>
 <body>
     <h1>Simulador de Cartas del Maestro</h1>
-          
-    <img src="imagenes/carta1.jpg" alt="Carta 1">
-    <img src="imagenes/carta2.jpg" alt="Carta 2">
-    <img src="imagenes/carta3.jpg" alt="Carta 3">
-    <img src="imagenes/carta4.jpg" alt="Carta 4">
-    <img src="imagenes/carta5.jpg" alt="Carta 5">
-    <img src="imagenes/carta6.jpg" alt="Carta 6">
-    <img src="imagenes/carta7.jpg" alt="Carta 7">
-    <img src="imagenes/carta8.jpg" alt="Carta 8">
-    <img src="imagenes/carta9.jpg" alt="Carta 9">
-    <img src="imagenes/carta10.jpg" alt="Carta 10">
-    <img src="imagenes/carta11.jpg" alt="Carta 11">
-    <img src="imagenes/carta12.jpg" alt="Carta 12">
-    <img src="imagenes/carta13.jpg" alt="Carta 13">
-    <img src="imagenes/carta14.jpg" alt="Carta 14">
-    <img src="imagenes/carta15.jpg" alt="Carta 15">
-    <img src="imagenes/carta16.jpg" alt="Carta 16">
-    <img src="imagenes/carta17.jpg" alt="Carta 17">
-    <img src="imagenes/carta18.jpg" alt="Carta 18">
-    <img src="imagenes/carta19.jpg" alt="Carta 19">
-    <img src="imagenes/carta20.jpg" alt="Carta 20">
-    <img src="imagenes/carta21.jpg" alt="Carta 21">
-    <img src="imagenes/carta22.jpg" alt="Carta 22">
 
-    
+    <!-- Botones para elegir cuántas cartas mostrar (1, 3 o 5) -->
+    <button onclick="mostrarCartasAleatorias(1)">Mostrar 1 Carta</button>
+    <button onclick="mostrarCartasAleatorias(3)">Mostrar 3 Cartas</button>
+    <button onclick="mostrarCartasAleatorias(5)">Mostrar 5 Cartas</button>
+    <br><br>
+
+    <!-- Contenedor donde se mostrarán las cartas aleatorias -->
+    <div id="cartasMostradas" class="cartas-mostradas"></div>
+
+    <br><br>
+    <!-- El botón original para mostrar una carta -->
     <button onclick="mostrarCarta()">Mostrar Carta</button>
     <br><br>
+    <!-- Aquí se muestra la carta seleccionada -->
     <img id="cartaImagen" src="" alt="Carta del Maestro">
-    
+
+    <!-- Rutas de las imágenes de las cartas (agregadas en las etiquetas <img>) -->
+    <div id="cartas" style="display:none">
+        <img src="imagenes/carta1.jpg" alt="Carta 1">
+        <img src="imagenes/carta2.jpg" alt="Carta 2">
+        <img src="imagenes/carta3.jpg" alt="Carta 3">
+        <img src="imagenes/carta4.jpg" alt="Carta 4">
+        <img src="imagenes/carta5.jpg" alt="Carta 5">
+        <img src="imagenes/carta6.jpg" alt="Carta 6">
+        <img src="imagenes/carta7.jpg" alt="Carta 7">
+        <img src="imagenes/carta8.jpg" alt="Carta 8">
+        <img src="imagenes/carta9.jpg" alt="Carta 9">
+        <img src="imagenes/carta10.jpg" alt="Carta 10">
+        <img src="imagenes/carta11.jpg" alt="Carta 11">
+        <img src="imagenes/carta12.jpg" alt="Carta 12">
+        <img src="imagenes/carta13.jpg" alt="Carta 13">
+        <img src="imagenes/carta14.jpg" alt="Carta 14">
+        <img src="imagenes/carta15.jpg" alt="Carta 15">
+        <img src="imagenes/carta16.jpg" alt="Carta 16">
+        <img src="imagenes/carta17.jpg" alt="Carta 17">
+        <img src="imagenes/carta18.jpg" alt="Carta 18">
+        <img src="imagenes/carta19.jpg" alt="Carta 19">
+        <img src="imagenes/carta20.jpg" alt="Carta 20">
+        <img src="imagenes/carta21.jpg" alt="Carta 21">
+        <img src="imagenes/carta22.jpg" alt="Carta 22">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
