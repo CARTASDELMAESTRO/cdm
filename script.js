@@ -24,14 +24,13 @@ const cartas = [
     "https://drive.google.com/uc?export=view&id=1fT1UX6bE9dSd6ZwJ3gBihPvHH4zl1vpK"
 ];
 
-
 // Función para obtener una carta aleatoria
 function obtenerCartaAleatoria() {
     const indiceAleatorio = Math.floor(Math.random() * cartas.length);
     return cartas[indiceAleatorio];
 }
 
-// Función para mostrar una carta aleatoria
+// Función para mostrar una carta aleatoria en la imagen principal
 function mostrarCarta() {
     const cartaAleatoria = obtenerCartaAleatoria();  // Obtener una carta aleatoria
     document.getElementById("cartaImagen").src = cartaAleatoria;  // Mostrar la carta en el contenedor
@@ -47,6 +46,10 @@ function mostrarCartasAleatorias(numCartas) {
         const cartaAleatoria = obtenerCartaAleatoria();  // Obtener una carta aleatoria
         const imagenCarta = document.createElement('img');  // Crear un nuevo elemento de imagen
         imagenCarta.src = cartaAleatoria;  // Establecer la fuente de la imagen
+        imagenCarta.alt = `Carta ${i + 1}`;  // Establecer un texto alternativo por si no se carga la imagen
         contenedorCartas.appendChild(imagenCarta);  // Agregar la carta al contenedor
     }
 }
+
+// Si quieres que se muestren cartas automáticamente al cargar la página, puedes añadir algo como esto:
+// mostrarCartasAleatorias(3);  // Esto muestra 3 cartas al cargar la página
