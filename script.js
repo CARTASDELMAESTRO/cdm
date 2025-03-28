@@ -1,3 +1,4 @@
+// Array con las URL de las cartas
 const cartas = [
     "https://drive.google.com/uc?export=view&id=1zfuq5c1pgU9CFa_0fZyy-VyBBjUQolsN",
     "https://drive.google.com/uc?export=view&id=1CatSVa8EGDsdPEF7sfYvtjrUewnMvcjt",
@@ -23,7 +24,28 @@ const cartas = [
     "https://drive.google.com/uc?export=view&id=1fT1UX6bE9dSd6ZwJ3gBihPvHH4zl1vpK"
 ];
 
-function mostrarCarta() {
+// Función para obtener una carta aleatoria
+function obtenerCartaAleatoria() {
     const indiceAleatorio = Math.floor(Math.random() * cartas.length);
-    document.getElementById("cartaImagen").src = cartas[indiceAleatorio];
+    return cartas[indiceAleatorio];
+}
+
+// Función para mostrar una carta aleatoria
+function mostrarCarta() {
+    const cartaAleatoria = obtenerCartaAleatoria();  // Obtener una carta aleatoria
+    document.getElementById("cartaImagen").src = cartaAleatoria;  // Mostrar la carta en el contenedor
+}
+
+// Función para mostrar varias cartas aleatorias (1, 3 o 5)
+function mostrarCartasAleatorias(numCartas) {
+    const contenedorCartas = document.getElementById('cartasMostradas');  // Contenedor donde se mostrarán las cartas
+    contenedorCartas.innerHTML = '';  // Limpiar el contenedor antes de agregar nuevas cartas
+    
+    // Mostrar las cartas aleatorias
+    for (let i = 0; i < numCartas; i++) {
+        const cartaAleatoria = obtenerCartaAleatoria();  // Obtener una carta aleatoria
+        const imagenCarta = document.createElement('img');  // Crear un nuevo elemento de imagen
+        imagenCarta.src = cartaAleatoria;  // Establecer la fuente de la imagen
+        contenedorCartas.appendChild(imagenCarta);  // Agregar la carta al contenedor
+    }
 }
