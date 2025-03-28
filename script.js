@@ -24,6 +24,7 @@ const cartas = [
     "https://drive.google.com/uc?export=view&id=1fT1UX6bE9dSd6ZwJ3gBihPvHH4zl1vpK"
 ];
 
+
 // Función para obtener una carta aleatoria
 function obtenerCartaAleatoria() {
     const indiceAleatorio = Math.floor(Math.random() * cartas.length);
